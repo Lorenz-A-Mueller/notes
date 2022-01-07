@@ -1,1 +1,11 @@
-<h1>Notes</h1>
+
+<div>
+  <h1>Notes</h1>
+  <created-note *ngFor="let note of notes" [created_note]="note" (deleteClick)="deleteNote(note)"></created-note>
+  <h2>Create new note:</h2>
+  <textarea  [(ngModel)]= "created_text"></textarea>
+<br/>
+  {{created_text}}
+  <br/>
+  <app-button text="create note!" (btnClick)="createNote()" ></app-button>
+</div>

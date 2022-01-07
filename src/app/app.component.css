@@ -1,0 +1,17 @@
+div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    /* background-color: pink; */
+    width: max-content;
+}
+
+h1 {
+    margin: 0 auto 100px auto;
+    width: max-content;
+}
+
+h2 {
+    margin-top: 100px;
+}
+
