@@ -8,4 +8,24 @@
   {{created_text}}
   <br/>
   <app-button text="create note!" (btnClick)="createNote()" ></app-button>
+  <app-button text="create another note" (btnClick)="createNote()" ></app-button>
+  <br/>
+  <h2>Random Fact:</h2>
+  <p>{{fact}}</p>
+  <br/>
+  <br/>
+  <p greenText>Styled with a custom directive</p>
+  <p appBetterGreenText>Styled with a custom directive with the Renderer (might be preferable when Angular is not run in the browser</p>
+  <p appInteractive>Styled with a custom interactive (Host Listener) directive</p>
+  <p appInputDirective [backgroundColor]="'orange'">Styled with a custom interactive (Host Listener) directive with Input</p>
+  <div *ngFor="let number of listOfNumbers" >
+   <p *appIfDivisibleByThree="number" >{{number}} is divisible by three. </p>
+</div>
+
+<div [ngSwitch]="switchValue">
+  <p *ngSwitch="5">The selected value is 5</p>
+  <p *ngSwitch="10">The selected value is 10</p>
+  <p *ngSwitchDefault>The selected value is the default {{switchValue}}</p>
+
+</div>
 </div>
